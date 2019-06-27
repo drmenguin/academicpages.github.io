@@ -400,3 +400,43 @@
   font-size: $type-size-6;
   text-transform: uppercase;
 }
+
+
+/* Stuff I added */
+img.welcome {
+    position: center;
+    margin: 0 auto;
+    display: block;
+    width: 65%;
+}
+
+figcaption.caption {
+    font-family: sans-serif;
+    position: relative;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+a.plain {
+    text-decoration: none;
+}
+
+ul.fsf {
+    margin: 0 auto;
+    width: 75%;
+    display: table;
+    list-style: none;
+}
+
+li.fsf {
+    display: table-cell;
+}
+
+li.fsf:last-child {
+    text-align: right;
+}
