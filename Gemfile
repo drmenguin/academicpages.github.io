@@ -9,4 +9,4 @@ group :jekyll_plugins do
   gem 'hawkins'
 end
 
-gem 'html-proofer'
+#gem 'html-proofer'
