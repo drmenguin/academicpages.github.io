@@ -1,11 +1,12 @@
 source 'http://rubygems.org'
 
-gem 'github-pages'
-gem 'rake'
-gem 'html-proofer'
+gem 'github-pages', group: :jekyll_plugins
+
 group :jekyll_plugins do
   gem 'jekyll-feed'
   gem 'jekyll-admin'
   gem 'jekyll-sitemap'
   gem 'hawkins'
 end
+
+gem 'html-proofer'
