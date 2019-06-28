@@ -35,7 +35,17 @@
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
-    {% if post.date %}<p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ post.date | date: '%B %d, %Y' }}</p>{% endif %}
+
+    {% if post.date %}<p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i>
+    {{ post.date | date: '%A' }}
+    {% assign day = post.date | date: "%-d"  %}
+    {% case day %}
+    {% when '1' or '21' or '31' %}{{ day }}st
+    {% when '2' or '22' %}{{ day }}nd
+    {% when '3' or '23' %}{{ day }}rd
+    {% else %}{{ day }}th
+    {% endcase %}
+    {{ post.date | date: 'of %B, %Y' }}</p>{% endif %}
     {% if post.venue %}<p class="archive__item-excerpt" itemprop="description">{{post.type}}, {{ post.venue }},  {{post.location}} {% endif %}
     {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>{% endif %}
   </article>

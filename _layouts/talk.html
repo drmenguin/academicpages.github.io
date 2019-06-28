@@ -33,7 +33,15 @@ layout: default
         {% if page.modified %}
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
         {% elsif page.date %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%A" }} {% assign day = page.date | date: "%-d"  %}
+{% case day %}
+  {% when '1' or '21' or '31' %}{{ day }}st
+  {% when '2' or '22' %}{{ day }}nd
+  {% when '3' or '23' %}{{ day }}rd
+  {% else %}{{ day }}th
+{% endcase %}
+{{ page.date | date: "of %B, %Y" }}
+</time></p>
         {% endif %}
         {% if page.talk_type %}<p>{{page.talk_type}} at {{ page.venue }},  {{page.location}} {% endif %}
 

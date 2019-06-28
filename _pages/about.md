@@ -14,7 +14,7 @@ redirect_from:
 
 I do not have any social media accounts. If you want to get in touch with me, send me an email by clicking the link provided.
 <figure>
-    <img class="welcome" src="{{ site.url }}/images/buda.jpeg" alt="Me in Budapest">
+    <img class="welcome" src="images/buda.jpeg" alt="Me in Budapest">
     <figcaption class="caption">Me in Budapest (photo by <a class="plain" href="https://stefaniatadama.com">Stefania Damato</a>)</figcaption>
 </figure>
 
