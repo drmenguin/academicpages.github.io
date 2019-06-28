@@ -4,6 +4,7 @@ subtitle: MATSEC Pure and Applied Mathematics
 collection: teaching
 modified: 2019-05-03
 readmoreoff: true
+comments: false
 type: "A-level"
 redirect_from:
     - /maths-notes
