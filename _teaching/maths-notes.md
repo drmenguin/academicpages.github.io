@@ -5,6 +5,7 @@ collection: teaching
 modified: 2019-05-03
 readmoreoff: true
 type: "A-level"
+redirect_from: /maths-notes
 ---
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 
