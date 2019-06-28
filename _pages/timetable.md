@@ -1,8 +1,11 @@
 ---
-permalink: /timetable
+permalink: /timetable/
 title: Timetable
 excerpt: This is my weekly schedule.
 author_profile: true
+redirect_from:
+    - /timetable
+    - /timetable.html
 ---
 
 
