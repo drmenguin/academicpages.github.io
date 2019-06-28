@@ -24,4 +24,8 @@ group :jekyll_plugins do
   gem "jekyll-feed"
   gem 'jekyll-sitemap'
   gem 'hawkins'
+  gem 'jekyll-admin'
+
+# For HTML Proofing
+gem 'html-proofer'
 end
