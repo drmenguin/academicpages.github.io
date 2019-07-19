@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 <p>
-    My name is Luke Collins. I graduated from the <a target="_blank" href="https://um.edu.mt">University of Malta</a> with a double honours in Mathematics and Computer Science (first class, <i>summa cum laude</i>), and I'm currently a research assistant at the <a target="_blank" href="https://www.um.edu.mt/science/maths">Department of Mathematics</a> there. I'm also the cofounder of the mobile app <a target="_blank" href="https://learnd.com.mt">LearnD</a>. I enjoy listening to classical music, playing the piano, and sometimes I tutor mathematics and computing to A-level and undergraduate students.
+    My name is Luke Collins. I graduated from the <a target="_blank" href="https://um.edu.mt">University of Malta</a> with a double honours in Mathematics and Computer Science (first class, <i>summa cum laude</i>), and I'm currently a research assistant at the <a target="_blank" href="https://www.um.edu.mt/science/maths">Department of Mathematics</a> there. I'm also the cofounder of the mobile app company <a target="_blank" href="https://learnd.com.mt">LearnD</a>. In my spare time, I enjoy listening to classical music, playing the piano, and sometimes I tutor mathematics and computing to A-level and undergraduate students.
 </p>
 
 I do not have any social media accounts. If you want to get in touch with me, send me an email by clicking the link provided.
