@@ -6,7 +6,7 @@ date: 2018-05-31
 excerpt: 'A two-graph $(\mathscr V, \Delta)$ is a combinatorial entity consisting of a set $\mathscr V$ together with a collection $\Delta$ of unordered triples of elements of $\mathscr V$, such that there exists a graph $G$ with vertex set $\mathscr V$'
 venue: 'Discrete Applied Mathematics'
 paperurl: https://www.sciencedirect.com/science/article/pii/S0166218X18302610
-citation: 'Irene Sciriha and Luke Collins. (2018). <em>Two-graphs and NSSDs: An algebraic approach</em>, Discrete Applied Mathematics. DOI: <a href="https://doi.org/10.1016/j.dam.2018.05.003">10.1016/j.dam.2018.05.003</a>.'
+citation: 'Irene Sciriha and Luke Collins. (2018). <em>Two-graphs and NSSDs: An algebraic approach</em>, Discrete Applied Mathematics, 266, pp. 92-102. DOI: <a href="https://doi.org/10.1016/j.dam.2018.05.003">10.1016/j.dam.2018.05.003</a>.'
 ---
 
 ## Abstract
