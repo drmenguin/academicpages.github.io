@@ -36,8 +36,8 @@ $\rm\LaTeX$, pronounced _lay-tek_ or _lah-tek_ (but **not** _lay-teks_!), is a p
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="456.30942pt"
-   height="113.64844pt"
-   viewBox="0 0 456.3094 113.64844"
+   height="125.64844pt"
+   viewBox="0 0 456.3094 125.64844"
    version="1.2"
    id="svg374"
    sodipodi:docname="document.svg"
@@ -68,7 +68,7 @@ $\rm\LaTeX$, pronounced _lay-tek_ or _lah-tek_ (but **not** _lay-teks_!), is a p
      id="namedview376"
      showgrid="false"
      inkscape:zoom="1"
-     inkscape:cx="203.87967"
+     inkscape:cx="312.37967"
      inkscape:cy="75.764978"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -570,16 +570,16 @@ $\rm\LaTeX$, pronounced _lay-tek_ or _lah-tek_ (but **not** _lay-teks_!), is a p
   </defs>
   <g
      id="surface724"
-     transform="translate(34.123472,9.4707033)">
+     transform="translate(34.123472,21.47074)">
     <path
        style="fill:none;stroke:#000000;stroke-width:0.47820002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
-       d="M -33.884372,52.437109 V 14.913671 H 128.55157 v 78.037504 c -22.42969,-3.984378 -58.790629,-3.984378 -81.220316,0 -22.425,3.989056 -58.790626,3.989056 -81.215626,0 z m 0,0"
+       d="M -29.384372,41.937109 V 4.413671 H 133.05157 v 78.037504 c -22.42969,-3.984378 -58.790629,-3.984378 -81.220316,0 -22.425,3.989056 -58.790626,3.989056 -81.215626,0 z m 0,0"
        id="path153"
        inkscape:connector-curvature="0" />
     <g
        style="fill:#970000;fill-opacity:1"
        id="g183"
-       transform="matrix(1.2,0,0,1.2,-38.806246,-9.4707033)">
+       transform="matrix(1.2,0,0,1.2,-34.306246,-19.970703)">
       <use
          xlink:href="#glyph0-1"
          x="8.0030003"
@@ -682,7 +682,7 @@ $\rm\LaTeX$, pronounced _lay-tek_ or _lah-tek_ (but **not** _lay-teks_!), is a p
     <g
        style="fill:#000000;fill-opacity:1"
        id="g187"
-       transform="matrix(1.2,0,0,1.2,-38.806246,-9.4707033)">
+       transform="matrix(1.2,0,0,1.2,-34.306246,-19.970703)">
       <use
          xlink:href="#glyph0-13"
          x="81.228111"
@@ -694,7 +694,7 @@ $\rm\LaTeX$, pronounced _lay-tek_ or _lah-tek_ (but **not** _lay-teks_!), is a p
     <g
        style="fill:#009700;fill-opacity:1"
        id="g203"
-       transform="matrix(1.2,0,0,1.2,-38.806246,-9.4707033)">
+       transform="matrix(1.2,0,0,1.2,-34.306246,-19.970703)">
       <use
          xlink:href="#glyph0-11"
          x="86.458473"
@@ -748,7 +748,7 @@ $\rm\LaTeX$, pronounced _lay-tek_ or _lah-tek_ (but **not** _lay-teks_!), is a p
     <g
        style="fill:#000000;fill-opacity:1"
        id="g207"
-       transform="matrix(1.2,0,0,1.2,-38.806246,-9.4707033)">
+       transform="matrix(1.2,0,0,1.2,-34.306246,-19.970703)">
       <use
          xlink:href="#glyph0-16"
          x="123.07103"
@@ -760,7 +760,7 @@ $\rm\LaTeX$, pronounced _lay-tek_ or _lah-tek_ (but **not** _lay-teks_!), is a p
     <g
        style="fill:#3030ff;fill-opacity:1"
        id="g223"
-       transform="matrix(1.2,0,0,1.2,-38.806246,-9.4707033)">
+       transform="matrix(1.2,0,0,1.2,-34.306246,-19.970703)">
       <use
          xlink:href="#glyph0-1"
          x="8.0030003"
@@ -814,7 +814,7 @@ $\rm\LaTeX$, pronounced _lay-tek_ or _lah-tek_ (but **not** _lay-teks_!), is a p
     <g
        style="fill:#00004a;fill-opacity:1"
        id="g241"
-       transform="matrix(1.2,0,0,1.2,-38.806246,-9.4707033)">
+       transform="matrix(1.2,0,0,1.2,-34.306246,-19.970703)">
       <use
          xlink:href="#glyph0-2"
          x="44.615555"
@@ -875,7 +875,7 @@ $\rm\LaTeX$, pronounced _lay-tek_ or _lah-tek_ (but **not** _lay-teks_!), is a p
     <g
        style="fill:#3030ff;fill-opacity:1"
        id="g245"
-       transform="matrix(1.2,0,0,1.2,-38.806246,-9.4707033)">
+       transform="matrix(1.2,0,0,1.2,-34.306246,-19.970703)">
       <use
          xlink:href="#glyph0-16"
          x="86.458473"
@@ -887,7 +887,7 @@ $\rm\LaTeX$, pronounced _lay-tek_ or _lah-tek_ (but **not** _lay-teks_!), is a p
     <g
        style="fill:#4a4a4a;fill-opacity:1"
        id="g251"
-       transform="matrix(1.2,0,0,1.2,-38.806246,-9.4707033)">
+       transform="matrix(1.2,0,0,1.2,-34.306246,-19.970703)">
       <use
          xlink:href="#glyph0-19"
          x="28.924"
@@ -906,7 +906,7 @@ $\rm\LaTeX$, pronounced _lay-tek_ or _lah-tek_ (but **not** _lay-teks_!), is a p
     <g
        style="fill:#4a4a4a;fill-opacity:1"
        id="g265"
-       transform="matrix(1.2,0,0,1.2,-38.806246,-9.4707033)">
+       transform="matrix(1.2,0,0,1.2,-34.306246,-19.970703)">
       <use
          xlink:href="#glyph0-2"
          x="44.615093"
@@ -953,7 +953,7 @@ $\rm\LaTeX$, pronounced _lay-tek_ or _lah-tek_ (but **not** _lay-teks_!), is a p
     <g
        style="fill:#3030ff;fill-opacity:1"
        id="g277"
-       transform="matrix(1.2,0,0,1.2,-38.806246,-9.4707033)">
+       transform="matrix(1.2,0,0,1.2,-34.306246,-19.970703)">
       <use
          xlink:href="#glyph0-1"
          x="8.0030003"
@@ -993,7 +993,7 @@ $\rm\LaTeX$, pronounced _lay-tek_ or _lah-tek_ (but **not** _lay-teks_!), is a p
     <g
        style="fill:#00004a;fill-opacity:1"
        id="g295"
-       transform="matrix(1.2,0,0,1.2,-38.806246,-9.4707033)">
+       transform="matrix(1.2,0,0,1.2,-34.306246,-19.970703)">
       <use
          xlink:href="#glyph0-2"
          x="34.154823"
@@ -1054,7 +1054,7 @@ $\rm\LaTeX$, pronounced _lay-tek_ or _lah-tek_ (but **not** _lay-teks_!), is a p
     <g
        style="fill:#3030ff;fill-opacity:1"
        id="g299"
-       transform="matrix(1.2,0,0,1.2,-38.806246,-9.4707033)">
+       transform="matrix(1.2,0,0,1.2,-34.306246,-19.970703)">
       <use
          xlink:href="#glyph0-16"
          x="75.997742"
@@ -1065,13 +1065,13 @@ $\rm\LaTeX$, pronounced _lay-tek_ or _lah-tek_ (but **not** _lay-teks_!), is a p
     </g>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.47820002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
-       d="m 180.05313,77.951171 h 94.40625 V 26.927734 h -94.40625 z m 0,0"
+       d="m 184.55313,67.451171 h 94.40625 V 16.427734 h -94.40625 z m 0,0"
        id="path301"
        inkscape:connector-curvature="0" />
     <g
        style="fill:#000000;fill-opacity:1"
        id="g319"
-       transform="matrix(1.2,0,0,1.2,-38.806246,-9.4707033)">
+       transform="matrix(1.2,0,0,1.2,-34.306246,-19.970703)">
       <use
          xlink:href="#glyph1-1"
          x="198.304"
@@ -1132,7 +1132,7 @@ $\rm\LaTeX$, pronounced _lay-tek_ or _lah-tek_ (but **not** _lay-teks_!), is a p
     <g
        style="fill:#000000;fill-opacity:1"
        id="g323"
-       transform="matrix(1.2,0,0,1.2,-38.806246,-9.4707033)">
+       transform="matrix(1.2,0,0,1.2,-34.306246,-19.970703)">
       <use
          xlink:href="#glyph2-1"
          x="215.314"
@@ -1144,7 +1144,7 @@ $\rm\LaTeX$, pronounced _lay-tek_ or _lah-tek_ (but **not** _lay-teks_!), is a p
     <g
        clip-path="url(#clip1)"
        id="g327"
-       transform="matrix(1.2,0,0,1.2,-38.806246,-9.4707033)"
+       transform="matrix(1.2,0,0,1.2,-34.306246,-19.970703)"
        style="clip-rule:nonzero">
       <path
          style="fill:none;stroke:#ca0000;stroke-width:1.19553006;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
@@ -1156,7 +1156,7 @@ $\rm\LaTeX$, pronounced _lay-tek_ or _lah-tek_ (but **not** _lay-teks_!), is a p
     <g
        style="fill:#000000;fill-opacity:1"
        id="g333"
-       transform="matrix(1.2,0,0,1.2,-38.806246,-9.4707033)">
+       transform="matrix(1.2,0,0,1.2,-34.306246,-19.970703)">
       <use
          xlink:href="#glyph3-1"
          x="310.353"
@@ -1175,7 +1175,7 @@ $\rm\LaTeX$, pronounced _lay-tek_ or _lah-tek_ (but **not** _lay-teks_!), is a p
     <g
        style="fill:#000000;fill-opacity:1"
        id="g347"
-       transform="matrix(1.2,0,0,1.2,-38.806246,-9.4707033)">
+       transform="matrix(1.2,0,0,1.2,-34.306246,-19.970703)">
       <use
          xlink:href="#glyph3-3"
          x="325.63327"
@@ -1221,13 +1221,13 @@ $\rm\LaTeX$, pronounced _lay-tek_ or _lah-tek_ (but **not** _lay-teks_!), is a p
     </g>
     <path
        style="fill:#ca0000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.20000005"
-       d="m 349.15469,89.730863 h 39.60937 V 70.404297 h -39.60937 z m 0,0"
+       d="m 353.65469,79.230863 h 39.60937 V 59.904297 h -39.60937 z m 0,0"
        id="path349"
        inkscape:connector-curvature="0" />
     <g
        style="fill:#ffffff;fill-opacity:1"
        id="g357"
-       transform="matrix(1.2,0,0,1.2,-38.806246,-9.4707033)">
+       transform="matrix(1.2,0,0,1.2,-34.306246,-19.970703)">
       <use
          xlink:href="#glyph4-1"
          x="327.198"
@@ -1252,13 +1252,13 @@ $\rm\LaTeX$, pronounced _lay-tek_ or _lah-tek_ (but **not** _lay-teks_!), is a p
     </g>
     <path
        style="fill:#ca0000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.20000005"
-       d="m 394.97969,17.740234 h 17.00625 L 394.97969,0.73398385 V 17.740234"
+       d="m 399.47969,7.240234 h 17.00625 l -17.00625,-17.00625 v 17.00625"
        id="path359"
        inkscape:connector-curvature="0" />
     <g
        clip-path="url(#clip2)"
        id="g363"
-       transform="matrix(1.2,0,0,1.2,-38.806246,-9.4707033)"
+       transform="matrix(1.2,0,0,1.2,-34.306246,-19.970703)"
        style="clip-rule:nonzero">
       <path
          style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -1268,27 +1268,27 @@ $\rm\LaTeX$, pronounced _lay-tek_ or _lah-tek_ (but **not** _lay-teks_!), is a p
     </g>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.95641202;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
-       d="m 128.82813,52.437109 h 49.72969"
+       d="m 133.32813,41.937109 h 49.72969"
        id="path365"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.95641202;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
-       d="m 174.19844,49.746484 4.65938,2.690625 -4.65938,2.690625"
+       d="m 178.69844,39.246484 4.65938,2.690625 -4.65938,2.690625"
        id="path367"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.95641202;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
-       d="m 274.69844,52.437109 h 49.76719"
+       d="m 279.19844,41.937109 h 49.76719"
        id="path369"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.95641202;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
-       d="m 320.10626,49.746484 4.65937,2.690625 -4.65937,2.690625"
+       d="m 324.60626,39.246484 4.65937,2.690625 -4.65937,2.690625"
        id="path371"
        inkscape:connector-curvature="0" />
   </g>
 </svg>
- </center>
+</center>
 
 The compiler we will be using to produce PDF documents from $\rm\LaTeX$ source code is called $\rm pdf\LaTeX$. There are different ways to get $\rm pdf\LaTeX$, and these differ from one operating system to another.
 
