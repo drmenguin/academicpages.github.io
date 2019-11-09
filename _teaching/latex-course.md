@@ -1296,7 +1296,7 @@ In truth, the situation is not as simple as we have made it out to be. $\rm\LaTe
 
 So now we will describe how to go about obtaining a $\rm\TeX$ distribution for different operating systems.
 
-### Linux Users
+### For Linux Users
 For Linux, the best option is to install the `texlive` distribution. This distribution comes in various forms, but the best for a beginner is one of the following:
 
 - `texlive-latex-extra` (404MB)
