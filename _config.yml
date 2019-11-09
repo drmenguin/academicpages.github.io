@@ -84,6 +84,7 @@ author:
   avatar           : "old_me.jpg"
   bio              : "I like maths and computers, can play the piano and also do a bit of teaching."
   location         : "University of Warwick"
+  locationurl      : "https://warwick.ac.uk/fac/sci/maths/people/staff/collins/"
   employer         : # "University of Malta"
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=iJlw-8AAAAAJ"
@@ -180,6 +181,9 @@ collections:
     output: true
     permalink: /:collection/:path/
   publications:
+    output: true
+    permalink: /:collection/:path/
+  projects:
     output: true
     permalink: /:collection/:path/
   #portfolio:
