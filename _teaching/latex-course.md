@@ -2,7 +2,7 @@
 title: "Introduction to LaTeX"
 subtitle: A workshop for doctoral students at the University of Malta
 collection: teaching
-modified: 2019-10-09
+modified: 2019-11-09
 readmoreoff: true
 comments: false
 type: "Postgraduate"
