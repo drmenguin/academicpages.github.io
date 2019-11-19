@@ -115,6 +115,9 @@
       {% if author.orcid %}
         <li><a href="{{ author.orcid }}" target="_blank"><i class="ai ai-orcid-square ai-fw"></i> ORCID</a></li>
       {% endif %}
+      {% if author.wishlistr %}
+        <li><a href="{{ author.wishlistr }}" target="_blank"><i class="fas fa-list"></i> Wishlist</a></li>
+      {% endif %}
       {% if author.imdb %}
         <li><a href="{{ author.imdb }}" target="_blank"><i class="fab fa-imdb"></i> Top Films</a></li>
       {% endif %}
