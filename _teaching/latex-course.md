@@ -20,7 +20,7 @@ If you find any errors or typos in these notes, please <a href="mailto:luke@math
 
  - Installing LaTeX on your machine (below) [[PDF]](/files/latex-0.pdf)
  - Lecture 1: Basics [[PDF Slides]](/files/latex-1.pdf)
- - Lecture 2: Maths and Templates
+ - Lecture 2: Maths, More Elements and Templates [[PDF Slides]](/files/latex-2.pdf)
 
 
 ## Installing $\rm\LaTeX$ on your machine
