@@ -6,8 +6,8 @@ modified: 2017-07-12
 readmoreoff: true
 comments: false
 type: "Music"
+permalink: /teaching/music-teaching
 redirect_from:
-    - /music-teaching
     - /music-teaching/
     - /music-teaching.html
 ---
