@@ -15,7 +15,7 @@ redirect_from:
 I do not have any social media accounts. If you want to get in touch with me, send me an email by clicking the link provided.
 <figure>
     <img class="welcome" src="images/buda.jpeg" alt="Me in Budapest">
-    <figcaption class="caption">Me in Budapest (photo by the lovely <a class="plain" href="https://stefaniatadama.com">Stefania Damato</a>)</figcaption>
+    <figcaption class="caption">Me in Budapest</figcaption>
 </figure>
 
 I am a member and supporter of the <a target="_blank" href="https://www.youtube.com/watch?v=Ag1AKIl_2GM">Free Software Foundation</a>, a movement which advocates for users' rights to study the source code of programs executing on their machine. I make use of Arch Linux, and always run free (libre) whenever possible.
