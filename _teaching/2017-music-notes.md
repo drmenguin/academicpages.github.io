@@ -19,7 +19,7 @@ If you find any errors or typos in these notes, please <a href="mailto:luke.coll
 
 ## Music in Theory and Practice
 These are notes I use while teaching my students. Any notes with version number <1 are still work-in-progress.
- - [Chapter 1: Introduction]({{site.url}}/files/music_ch1.pdf)
+ - [Chapter 1: Introduction]({{site.url}}/files/music-ch1.pdf)
  - Chapter 2: Chords and Rests
 
 ### Musical Analysis
