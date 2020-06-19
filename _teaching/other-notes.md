@@ -1,6 +1,6 @@
 ---
 title: "Notes on Advanced Topics"
-subtitle: Here I provide notes on various topics which are beyond the scope of A-level, mainly to do with mathematics and computer science, but possibly other things too.
+subtitle: Notes on various topics, mainly to do with mathematics and computer science
 collection: teaching
 modified: 2020-06-03
 readmoreoff: true
