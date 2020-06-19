@@ -37,10 +37,6 @@ These are papers I prepare for my students as mock tests for their MASTEC A leve
  - May 2016: [[Paper I]]({{site.url}}/files/papers/2016_paper_1.pdf), [[Paper I Solutions]]({{site.url}}/files/papers/2016_paper_1_solutions.pdf)
  - May 2017: [[Paper I]]({{site.url}}/files/papers/2017_paper_1.pdf), [[Paper II]]({{site.url}}/files/papers/2017_paper_2.pdf), [[Paper II Solutions]]({{site.url}}/files/papers/2017_paper_2_solutions.pdf)
 
-## Other Topics
-Here are some notes I have written about other topics.
- - [Legendre Polynomials]({{site.url}}/files/legendre.pdf)
-
 ## Miscellaneous Resources
 Here are some other resources which may be of interest.
  - [O-Level Geometry Theorems]({{site.url}}/files/geometry.pdf)
