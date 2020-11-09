@@ -133,7 +133,7 @@ For each $1\leqslant a\leqslant n$, there are precisely $\lfloor \sqrt{n+a}\rflo
 \\begin{align\*}
     s_n &= \sum_{a\leqslant n}\big(\lfloor \sqrt{n+a}\rfloor-\lceil\sqrt{1+a}\rceil+1\big) \\\\[3pt]
     &= \sum_{a\leqslant n}\big( \sqrt{n+a}-\sqrt{1+a}+O(1)\big) \\\\[3pt]
-    &= \sum_{a\leqslant n} \sqrt{n+a}-\sum_{a\leqslant n}\sqrt{1+a}+O(n), \tag{\\theequation} \label{eq:ddagger}
+    &= \sum_{a\leqslant n} \sqrt{n+a}-\sum_{a\leqslant n}\sqrt{1+a}+O(n), \tag{3} \label{eq:ddagger}
 \\end{align\*}
 and we are led to estimating a pair of sums of the form $\sum_{a\leq n}\sqrt{X+a}$. Summing by parts, we see that
 \\begin{align\*}
