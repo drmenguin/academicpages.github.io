@@ -114,7 +114,7 @@ In terms of this notation, we may express \eqref{eq:phiMuDivisorSum} as
 \end{equation\*}
 where $\operatorname{id}$ denotes the identity function $\operatorname{id}(n) = n$ for all $n$.
 
-It turns out that the set of arithmetic functions with $f(1)\neq 0$ forms an Abelian group under the operation of Dirichlet convolution. Indeed, if $f,g, h\colon\bb N\to\bb C$ are arithmetical functions with $f(1),g(1), h(1) \neq 0$, then:
+It turns out that the set of arithmetic functions with $f(1)\neq 0$ forms an Abelian group under the operation of Dirichlet convolution. Indeed, if $f,g, h\colon\bb N\to\bb C$ are arithmetical functions and $f(1) \neq 0$, then:
  1. $f\* g$ is an arithmetical function,
  2. $f\*(g\*h) = (f\*g)\* h$,
  3. $f\*\varepsilon = \varepsilon\* f = f$,
