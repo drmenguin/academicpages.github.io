@@ -8,7 +8,7 @@ tags:
 ---
 \\(\def\bb{\mathbb}\\)An _arithmetic function_ is a sequence $f\colon\bb N\to\bb C$. Some of the important arithmetic functions we study in number theory are:
 
- - $\omega(n)$: the number of distinct prime divisors of $n$
+ - $\omega(n)$: the number of distinct prime divisors of $n$.
  - $\mu(n)$: the _Möbius function_, defined by
    \\begin{align\*}
         \mu(n) = \\begin{cases}
@@ -75,7 +75,7 @@ We have a similarly nice result for the divisor sum of the totient function. For
     \label{eq:phiDivisorSum}
     \sum_{d\mid n} \varphi(d) = n.
 \end{equation}
-To prove this formally, one would partition the residue group $(\bb Z/n\bb Z)^\times$ according to the value of $\operatorname{hcf}(n,r)$ for each residue $r$. But we can do it in a more informal way which conveys the essential idea of the proof.
+To prove this formally, one would partition $\bb Z/n\bb Z$ according to the value of $\operatorname{hcf}(n,r)$ for each residue $r$, obtaining $n=\#(\bb Z/n\bb Z)=\sum\_{d\mid n}\varphi(d)$. But we can do it in a more informal way which conveys the essential idea behind the proof.
 
 _Proof of \eqref{eq:phiDivisorSum}:_ Consider the $n$ fractions $1/n, \dots, n/n$, and simplify them so that they are in reduced form. Each fraction, when reduced, will have a denominator which is a divisor of $n$. But for each divisor $d$ of $n$, there are precisely $\varphi(d)$ fractions with denominator $d$. Thus the total number of fractions is $\sum_{d\mid n}\varphi(d)$. $$\tag*{$\Box$}$$
 
@@ -143,7 +143,7 @@ By \eqref{eq:muDivisorSum}, we have that $\mu\*\boldsymbol 1=\varepsilon$, so $\
     \label{eq:mobiusInversion}
     g = f \* \boldsymbol 1 \iff f = g\* \mu.
  \end{equation}
- The proof follows by convolving with $\mu$ on both sides.
+ This follows by convolving the equation on the left with $\mu$ on both sides.
 
 
 ## An Application to $\Lambda(n)$ and Cyclotomic Polynomials
