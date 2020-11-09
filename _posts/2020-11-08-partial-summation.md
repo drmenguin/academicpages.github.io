@@ -94,4 +94,4 @@ thus the probability is
 \begin{equation\*}
     \frac{4\sqrt 2-4}{3\sqrt n} + O\Big(\frac1n\Big),
 \end{equation\*}
-as required. $$\tag*{$\Box$}$$
+as required.  $$\tag*{$\Box$}$$
