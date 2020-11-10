@@ -78,7 +78,7 @@ which is already an interesting fact in and of itself. Now since $\lfloor x\rflo
 \\end{align\*}
 which is a nice estimate for $\sum_{n\leqslant x}\frac 1n$. From this estimate, it is clear why $\sum_n\frac1n$ diverges (since $\log x\to\infty$ as $x\to\infty$). It turns out that
 \begin{equation\*}
-    \gamma=\lim_{x\to\infty}\Big(\sum_{n\leq x}\frac1n-\log x\Big)
+    \gamma=\lim_{x\to\infty}\Big(\sum_{n\leqslant x}\frac1n-\log x\Big)
 \end{equation\*}
         exists, and is known as the [Euler--Mascheroni constant](https://en.wikipedia.org/wiki/Euler%E2%80%93Mascheroni_constant) ($\gamma\approx 0.577$).
 <figure>
@@ -109,7 +109,7 @@ Finally, observe that
 ### Exercise
 Show that
 \begin{equation\*}
-    \sum_{n\leq x}\log n = x\log x - x + O(\log x).
+    \sum_{n\leqslant x}\log n = x\log x - x + O(\log x).
 \end{equation*}
 
 ## A Nice Probabilistic Example
@@ -135,7 +135,7 @@ For each $1\leqslant a\leqslant n$, there are precisely $\lfloor \sqrt{n+a}\rflo
     &= \sum_{a\leqslant n}\big( \sqrt{n+a}-\sqrt{1+a}+O(1)\big) \\\\[3pt]
     &= \sum_{a\leqslant n} \sqrt{n+a}-\sum_{a\leqslant n}\sqrt{1+a}+O(n), \tag{3} \label{eq:ddagger}
 \\end{align\*}
-and we are led to estimating a pair of sums of the form $\sum_{a\leq n}\sqrt{X+a}$. Summing by parts, we see that
+and we are led to estimating a pair of sums of the form $\sum_{a\leqslant n}\sqrt{X+a}$. Summing by parts, we see that
 \\begin{align\*}
     \sum_{a\leqslant n}\sqrt{X+a} &= n\sqrt{X+n} - \frac12\int_1^n\frac{\lfloor t\rfloor}{\sqrt{X+t}}\,dt\\\\[3pt]
         &= n\sqrt{X+n} - \frac12\int_1^n\frac{t}{\sqrt{X+t}}\,dt + O\Big(\int_1^n\frac{dt}{\sqrt{X+t}}\Big)\\\\[3pt]
