@@ -9,7 +9,7 @@ tags:
 
 A very useful result used often in analytic number theory is the so-called partial summation formula. It is a technique used to change sums into integrals, so that we can then use the nice results of calculus to attack the integral more effectively. We know that
 \begin{equation\*}
-    \sum\_{n=1}^N 1 = N, \qquad \sum_{n=1}^N n = \frac{n(n+1)}2,
+    \sum\_{n=1}^N 1 = N, \qquad \sum_{n=1}^N n = \frac{N(N+1)}2,
 \end{equation\*}
 and we have similar results for $\sum\_{k\leqslant N} n^k$ where $k$ is a positive integer, but can we get a nice formula for sums like
 \begin{equation\*}
