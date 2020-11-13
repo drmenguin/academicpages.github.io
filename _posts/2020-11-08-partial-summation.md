@@ -119,7 +119,7 @@ We show that the probability that two randomly chosen numbers from $\\{1,\dots,n
 \end{equation\*}
 Clearly the probability is $s_n / n^2$, where
 \begin{equation\*}
-    s_n = \\#\\{(a,b)\in\{1,\dots,n\}^2 : \text{$a + b = k^2$ for some $k$}\\}.
+    s_n = \\#\\{(a,b)\in\\{1,\dots,n\\}^2 : \text{$a + b = k^2$ for some $k$}\\}.
 \end{equation*}
 We can construct all valid pairs $(a,b)$ which contribute to the total $s_k$ as follows. First, we pick $a$ in the range $1\leqslant a\leqslant n$, and then choose $k$ such that $b=a-k^2$ lies in the range $1\leqslant k^2 - a\leqslant n$, i.e., such that
 \begin{equation\*}
