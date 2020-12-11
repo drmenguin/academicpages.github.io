@@ -22,7 +22,7 @@ These are notes I use while teaching my students. Any notes with version number 
  - [Elementary Algebra]({{site.url}}/files/ea.pdf)
  - Coordinates, Functions and Inequalities
  - [Trigonometry]({{site.url}}/files/trig.pdf)
- - [Single-variable Calculus]({{site.url}}/files/ea.pdf)
+ - [Single-variable Calculus]({{site.url}}/files/calc.pdf)
  - [Linear Algebra]({{site.url}}/files/la.pdf)
  - Complex Numbers
  - Differential Equations
