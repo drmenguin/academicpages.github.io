@@ -20,9 +20,13 @@ If you find any errors or typos in these notes, please <a href="mailto:luke@math
 ## A-level Notes
 These are notes I use while teaching my students. Any notes with version number <1 are still work-in-progress.
  - [Elementary Algebra]({{site.url}}/files/ea.pdf)
- - Single-variable Calculus
+ - Coordinates, Functions and Inequalities
+ - [Trigonometry]({{site.url}}/files/trig.pdf)
+ - [Single-variable Calculus]({{site.url}}/files/ea.pdf)
  - [Linear Algebra]({{site.url}}/files/la.pdf)
  - Complex Numbers
+ - Differential Equations
+ - Combinatorics and Probability
 
 ## A-Level Cheat Sheets
 These "cheat sheets" attempt to outline a particular topic as concisely as possible, ideal for revision before an exam.

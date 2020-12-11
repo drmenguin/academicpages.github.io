@@ -21,7 +21,7 @@ If you find any errors or typos in these notes, please <a href="mailto:luke@math
  - Real Analysis
  - Complex Analysis
  - Group Theory
- - [Ring Theory]({{site.url}}/files/hs.pdf)
+ - [Ring Theory]({{site.url}}/files/rings.pdf)
  - Vector Spaces
  - [Hilbert Spaces]({{site.url}}/files/hs.pdf)
  - [Probabilistic and Extremal Combinatorics]({{site.url}}/files/pec.pdf)
