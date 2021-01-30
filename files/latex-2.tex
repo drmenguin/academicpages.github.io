@@ -1,0 +1,853 @@
+\documentclass{beamer}
+\usetheme{Boadilla}
+\usecolortheme{dolphin}
+\useoutertheme[subsection=false]{smoothbars}
+
+% Date
+\day=27 \month=11 \year=2019
+
+% Packages
+\usepackage{url,tikz,fontawesome,textcomp,pifont,xcolor,lato,datetime}
+\usetikzlibrary{shapes.symbols,arrows,positioning}
+
+% Hyperref
+\AfterPreamble{\hypersetup{
+    bookmarks,
+    bookmarksopen,
+    bookmarksdepth=3,
+    pdfstartview=FitH,
+    pdftitle={An Intorduction to LaTeX: Lecture 2}, 
+    pdfauthor={Luke Collins}, 
+    pdfsubject={LaTeX}, 
+    pdfproducer={Luke Collins}, 
+    pdfcreator={Created with vim+LaTeX}}}
+
+% Superior date format - God Save the Queen
+\newdateformat{myformat}{\ordinal{DAY} \monthname[\THEMONTH], \THEYEAR}
+
+% Tick and cross
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+
+% Normal Math
+\usefonttheme[onlymath]{serif}
+
+% Front matter
+\title[Intro to \LaTeX{}: Part II]{An Introduction to \LaTeX{}:\\Typesetting your Thesis or Research Paper}
+\subtitle{Part II: Maths, More Elements and Templates}
+
+\author[L. Collins \& J.P.\ Ebejer]{Luke Collins \and Jean-Paul Ebejer}
+
+\institute[UM]{
+    Doctoral School\\
+    University of Malta
+}	
+
+\date{\myformat\today}
+
+\titlegraphic{
+    \begin{minipage}{3.5cm}
+        \centering
+        \includegraphics[width=3cm]{um}\\
+        \vspace{0.1cm}
+    \end{minipage}
+}
+
+
+\begin{document}
+    \frame{\titlepage}
+   
+    \begin{frame}{Today's Plan}
+        \tableofcontents
+    \end{frame}
+
+    \section{Maths}
+    \subsection{Some Basic Examples and Symbols}
+    \begin{frame}{\LaTeX{} \& Maths}
+        \LaTeX{} supports two kinds of ways to write maths. The first is \emph{in-line}, i.e., within the text, like $\log x=\int_1^x\frac{dt}t$ for example, or as \emph{displayed maths}, like
+        \[\log x=\int_1^x\frac{dt}t.\]
+        \begin{itemize}
+            \item To type maths inline, we use dollar signs, so {\ttfamily\color{green!60!black}\$x+y=z\$} becomes $x+y=z$. \LaTeX{} ensures that the spacing is correct, so it doesn't matter if we write {\ttfamily\color{green!60!black}\$ x + y = \ \ z\$}, the result is the same (although the code is less legible!).
+            
+            \item For displayed maths, we do {\ttfamily\color{green!60!black}\char`\\[x+y=z\char`\\]}.
+        \end{itemize} 
+    \end{frame}
+
+    \begin{frame}{Inline and Displayed Maths}
+        
+        \begin{center}
+            \tikzset{
+                code/.style={
+                    draw,
+                    tape,
+                    tape bend top=none
+                }
+            }
+            \begin{tikzpicture}
+            \node[code] (prog) {
+                \begin{minipage}{11cm}
+                \footnotesize\ttfamily
+                {\bfseries\color{blue!80}\char92 begin\char`\{}{\bfseries\color{blue!30!black}document}{\bfseries\color{blue!80}\char`\}}\\
+                \phantom{xxxx}{\color{black!70} Suppose a right-angled triangle has side lengths {\color{green!60!black}\$a\$}, {\color{green!60!black}\$b\$} and}\\ 
+                \phantom{xxxx}{\color{black!70}{\color{green!60!black}\$c\$}.\ Then Pythagoras\textquotesingle{} theorem states that {\color{green!60!black}\char`\\[a\char`^{}2+b\char`^{}2=c\char`^{}2,\char`\\]}}\\
+                \phantom{xxxx}{\color{black!70}where {\color{green!60!black}\$c\$} is the longest side, i.e., the {\color{red!60!black}\char`\\emph}}\char`\{{\color{black!70}hypotenuse}\char`\}{\color{black!70}.}\\
+                {\bfseries\color{blue!80}\char92 end\char`\{}{\bfseries\color{blue!30!black}document}{\bfseries\color{blue!80}\char`\}}\\
+                \end{minipage}};
+            \end{tikzpicture}
+            
+            \bigskip
+            
+            \fbox{\begin{minipage}[b]{9cm}
+                    \rmfamily\footnotesize
+                    Suppose a right-angled triangle has side lengths $a$, $b$ and $c$. Then Pythagoras' theorem states that \[a^2+b^2=c^2,\] where $c$ is the longest side, i.e., the \emph{hypotenuse}.
+            \end{minipage}}
+        \end{center}        
+    \end{frame}
+
+    \begin{frame}{Math Mode and Symbols}
+        Most mathematical symbols correspond to commands whose names are quite natural. Most commands which are used in \emph{math mode} (i.e., between {\ttfamily\color{green!60!black}\$}$\dots$\!{\ttfamily\color{green!60!black}\$} or {\ttfamily\color{green!60!black}\char`\\[}$\dots$\!{\ttfamily\color{green!60!black}\char`\\]})  cannot be used in \emph{normal mode} (i.e, among the text), and vice-versa. One should not use {\ttfamily\color{red!60!black}\char`\\emph} or {\ttfamily\color{red!60!black}\char`\\textbf} in math mode, for example.
+        
+        \medskip
+        
+        Some examples of maths syntax:
+        \begin{center}
+            \renewcommand{\arraystretch}{1.4}
+            \begin{tabular}{ccc}
+                \ttfamily\color{green!60!black}e\char`^{}\char`\{i\char`\\pi\char`\}\ + 1 = 0 &\quad& $e^{i\pi}+1=0$\\
+                \ttfamily\color{green!60!black}\char`\\alpha+\char`\\beta=\char`\\frac\char`\{-b\char`\}\char`\{2a\char`\} && $\alpha+\beta=\frac{-b}{2a}$\\
+                \ttfamily\color{green!60!black}a\char`_n = a\char`_\char`\{n-1\char`\}\ + a\char`_\char`\{n-2\char`\} && $a_n=a_{n-1}+a_{n-2}$\\[4pt]
+                \ttfamily\color{green!60!black}\char`\\sum\char`_\char`\{n=1\char`\}\char`^{}\char`\\infty \char`\\frac 1\char`\{n\char`^{}s\char`\} && $\sum\limits_{n=1}^\infty \frac{1}{n^s}$
+            \end{tabular}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}{More Examples}
+        \begin{center}
+            \renewcommand{\arraystretch}{1.9}
+            \begin{tabular}{ccc}
+                \ttfamily\color{green!60!black}(A\char`\\cap \char`\\mathcal B)\char`\\times C &\quad& $(A\cap\mathcal B)\times C$\\
+                \ttfamily\color{green!60!black}\char`\\prod\char`_p\char`\\left(1-\char`\\frac1\char`\{p\char`^{}s\char`\}\char`\\right)\char`^{}\char`\{-1\char`\}&& $\prod\limits_p\big(1-\frac1{p^s}\big)^{-1}$\\
+                \ttfamily\color{green!60!black}\char`\\mathbf x=(x,y,z)&& $\mathbf x=(x,y,z)$\\[4pt]
+                \ttfamily\color{green!60!black}f\char`\\colon A \char`\\to B && $f\colon A\to B$\\
+                \ttfamily\color{green!60!black}\char`\\int\char`_\char`\{\char`\\partial\char`\\Omega\char`\}\char`\\omega && $\int\limits_{\partial\Omega}\omega$\\[7pt]
+                \ttfamily\color{green!60!black}\char`\\int\char`_0\char`^{}1 \char`\\sqrt[3]\char`\{x\char`\}\ \char`\\,dx && $\int\limits_0^1 \sqrt[3]{x}\,dx$\\
+                \ttfamily\color{green!60!black}\char`\\sin(\char`\\log x) && $\sin(\log x)$
+            \end{tabular}
+        \end{center}
+    \end{frame}
+
+    \subsection{The $\AmS$ Packages}
+    \begin{frame}{The American Mathematical Society ($\AmS$) Packages}
+        The AMS provides the packages ({\ttfamily\color{red!60!black}\char`\\usepackage}) \texttt{amsmath} for maths environments, \texttt{amssymb} for extra maths symbols and fonts, and \texttt{amsthm} for having numbered theorems (theorem 1, remark 2, etc.).
+        
+        \medskip
+        
+        Some common uses of \texttt{amssymb} are the blackboard ({\ttfamily\color{green!60!black}\char`\\mathbb}) and Fraktur ({\ttfamily\color{green!60!black}\char`\\mathfrak}) fonts.
+        \begin{center}
+            \renewcommand{\arraystretch}{1.4}
+            \begin{tabular}{ccc}
+                \ttfamily\color{green!60!black}\char`\\mathbb R \char`\\setminus \char`\\mathbb Z &\quad& $\mathbb R \setminus\mathbb Z$\\
+                \ttfamily\color{green!60!black}\char`\\mathfrak \char`\{AaBbCc\char`\}&& $\mathfrak{AaBbCc}$
+            \end{tabular}
+        \end{center}
+        
+        \texttt{amsmath} provides the {\ttfamily\color{green!60!black}\char`\\text} command, e.g.
+        \begin{center}
+            \ttfamily\color{green!60!black} 2\char`\\mathbb Z = \char`\\\char`\{x\char`\\in\char`\\mathbb Z : \char`\\text\char`\{\$x\$ is even\char`\}\char`\}
+        \end{center}
+        produces $2\mathbb Z=\{x\in\mathbb Z:\text{\rm $x$ is even}\}$.
+    \end{frame}
+
+    \begin{frame}{Other math mode environments}
+        \only<1>{
+        The \texttt{equation} environment produces numbered equations, which we will use later.
+        \begin{center}
+            \tikzset{
+                code/.style={
+                    draw,
+                    tape,
+                    tape bend top=none
+                }
+            }
+            \begin{tikzpicture}
+            \node[code] (prog) {
+                \begin{minipage}{5cm}
+                \footnotesize\ttfamily
+                {\color{black!70}We have}\\
+                {\bfseries\color{blue!80}\char92 begin\char`\{}{\bfseries\color{blue!30!black}equation}{\bfseries\color{blue!80}\char`\}}\\
+                \phantom{xxxx}{\color{green!60!black}\char`\\frac1\char`\{2\char`\\pi i\char`\}\char`\\int\char`_\char`\\gamma}\\
+                \phantom{xxxx}{\color{green!60!black}z\char`^{}n\char`\\,dz = 0,}\\
+                {\bfseries\color{blue!80}\char92 end\char`\{}{\bfseries\color{blue!30!black}equation}{\bfseries\color{blue!80}\char`\}}\\
+                {\color{black!70}for {\color{green!60!black}\$n\char`\\neq -1\$}.}
+                \end{minipage}};
+            \end{tikzpicture} \qquad 
+            \raisebox{9pt}{\fbox{\begin{minipage}[b]{4.8cm}
+                    \rmfamily\footnotesize 
+                    We have
+                   \[\phantom{(1)}\qquad~~ \frac1{2\pi i}\int_{\gamma} z^n \, dz = 0, \qquad (1)\]
+                   for $n\neq -1$.\\
+            \end{minipage}}}
+        \end{center}}
+        \texttt{amsmath} also provides the \texttt{gather} and \texttt{align} environments.
+        \only<2>{
+            \begin{center}
+                \tikzset{
+                    code/.style={
+                        draw,
+                        tape,
+                        tape bend top=none
+                    }
+                }
+                \begin{tikzpicture}
+                \node[code] (prog) {
+                    \begin{minipage}{10cm}
+                    \footnotesize\ttfamily
+                    {\bfseries\color{blue!80}\char92 begin\char`\{}{\bfseries\color{blue!30!black}gather}{\bfseries\color{blue!80}\char`\}}\\
+                    \phantom{xxxx}{\color{green!60!black} x\char`^{}2 - 3 = 0 }{\color{red!60!black}\char92\char92}\\ 
+                    \phantom{xxxx}{\color{green!60!black} \char`\\implies x\char`^{}2 = 3 }{\color{red!60!black}\char92\char92}\\
+                    \phantom{xxxx}{\color{green!60!black} \char`\\implies x = \char`\\pm \char`\\sqrt 3}\\
+                    {\bfseries\color{blue!80}\char92 end\char`\{}{\bfseries\color{blue!30!black}gather}{\bfseries\color{blue!80}\char`\}}\\
+                    \end{minipage}};
+                \end{tikzpicture}
+                
+                \bigskip
+                
+                \fbox{\footnotesize
+                    \begin{minipage}[b]{10cm}
+                        \begin{align}
+                            x^2 - 3 = 0 \tag*{$(1)$}\\
+                            \implies x^2 =3 \tag*{$(2)$}\\
+                            \implies x = \pm\sqrt 3 \tag*{$(3)$}
+                        \end{align}
+                \end{minipage}}
+            \end{center}
+            If you don't want numbering, use the \texttt{gather*} and \texttt{align*} environments instead.
+        }
+        \only<3>{
+            \begin{center}
+                \tikzset{
+                    code/.style={
+                        draw,
+                        tape,
+                        tape bend top=none
+                    }
+                }
+                \begin{tikzpicture}
+                \node[code] (prog) {
+                    \begin{minipage}{10cm}
+                    \footnotesize\ttfamily
+                    {\bfseries\color{blue!80}\char92 begin\char`\{}{\bfseries\color{blue!30!black}align}{\bfseries\color{blue!80}\char`\}}\\
+                    \phantom{xxxx}{\color{green!60!black} x\char`^{}2(x\char`^{}2+x+1)(x+2) {\bfseries\color{blue!80}\&}= x\char`^{}2(x\char`^{}3+x\char`^{}2+x+2x\char`^{}2+2x+2) }{\color{red!60!black}\char92\char92}\\ 
+                    \phantom{xxxxxxxxxxxxxxxxxxxxxx}{\color{green!60!black}{\bfseries\color{blue!80}\&}= x\char`^{}2(x\char`^{}3+3x\char`^{}2+3x+2) }{\color{red!60!black}\char92\char92}\\
+                    \phantom{xxxxxxxxxxxxxxxxxxxxxx}{\color{green!60!black}{\bfseries\color{blue!80}\&}= x\char`^{}5+3x\char`^{}4+3x\char`^{}3+2x\char`^{}2}\\
+                    {\bfseries\color{blue!80}\char92 end\char`\{}{\bfseries\color{blue!30!black}align}{\bfseries\color{blue!80}\char`\}}\\
+                    \end{minipage}};
+                \end{tikzpicture}
+                
+                \bigskip
+                
+                \fbox{\footnotesize
+                    \begin{minipage}[b]{10cm}
+                        \begin{align}
+                            x^2(x^2+x+1)(x+2) &= x^2(x^3+x^2+x+2x^2+2x+2) \tag*{$(1)$}\\
+                            &= x^2(x^3+3x^2+3x+2) \tag*{$(2)$}\\
+                            &= x^5+3x^4+3x^3+2x^2\tag*{$(3)$}
+                        \end{align}
+                \end{minipage}}
+            \end{center}
+            If you don't want numbering, use the \texttt{gather*} and \texttt{align*} environments instead.
+        }
+    \end{frame}
+
+    \subsection{Common Mistakes in Math Mode}
+    \begin{frame}{Some mistakes I have seen}
+        \begin{itemize}
+            \item \emph{Never} use math mode as a substitute for emphasised or italic text! Surely you can tell the $difference$/{\rmfamily\itshape difference} between them!
+            \item Use the appropriate commands for mathematical functions like sine, logarithms, etc., {\ttfamily\color{green!60!black}\$\char`\\sin x\$} gives $\sin x$, {\ttfamily\color{green!60!black}\$sin x\$} gives $sin x$. 
+            
+            If your function has no corresponding command, you can use \texttt{amsmath}'s {\ttfamily\color{green!60!black}\char`\\operatorname}, e.g., {\ttfamily\color{green!60!black}\$\char`\\operatorname\char`\{hcf\char`\}(a,b)\$} gives $\operatorname{hcf}(a,b)$.
+            \item In integrals, use the half-space command {\color{red!60!black}\ttfamily\char`\\,} between the integrand and differentials, e.g.
+            \begin{center}
+                \begin{tabular}{llc}
+                    \ttfamily\color{green!60!black}\char`\\int\char`\\sin x dx& $\displaystyle\int\sin xdx$& \xmark\\[6pt]
+                    \ttfamily\color{green!60!black}\char`\\int\char`\\sin x\char`\\,dx& $\displaystyle\int\sin x\,dx$ & \cmark
+                \end{tabular}
+            \end{center} 
+            Similarly, we do {\ttfamily\color{green!60!black}\$100\char`\\,\char`\\mathrm\char`\{cm\char`\}\$} or simply {\ttfamily 100\char`\\,cm} in normal mode to get $100\,\mathrm{cm}$.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Some mistakes I have seen}
+        \begin{itemize}
+            \item To show the type of a function, use the {\ttfamily\color{green!60!black}\char`\\colon} command, not a literal {\ttfamily\color{green!60!black}:}, the latter is for ratios.
+            \begin{center}
+                \begin{tabular}{llc}
+                    \ttfamily\color{green!60!black}g:A\char`\\to B& $g:A\to B$& \xmark\\
+                    \ttfamily\color{green!60!black}g \char`\\colon A\char`\\to B& $g\colon A\to B$ & \cmark\\
+                    \ttfamily\color{green!60!black} 1:2 & $1:2$ & \cmark
+                \end{tabular}
+            \end{center} 
+        
+            \medskip 
+            
+            \item Displayed maths should be read just as if it is inline, so punctuation and appropriate capitalisation is important there too. E.g.:
+            \begin{center}
+                \begin{tabular}{cc}
+                    \fbox{\footnotesize
+                        \begin{minipage}[b]{5cm}
+                           If we consider the equation
+                           \[x+1=2,\]
+                           \underline{s}ubtracting $1$ from both sides allows us to conclude that
+                           \[x=1.\]
+                    \end{minipage}}
+                    &
+                    \fbox{\footnotesize
+                        \begin{minipage}[b]{5cm}
+                            Consider the equation:
+                            \[x+1=2\]
+                            \underline{S}ubtracting $1$ from both sides allows us to conclude that:
+                            \[x=1\]
+                    \end{minipage}}\\
+                    \cmark & \xmark
+                \end{tabular}
+            \end{center}
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Some mistakes I have seen}
+        \begin{itemize}
+            \item For vector norms, use {\ttfamily\color{green!60!black}\char`\\|} and not two {\ttfamily\color{green!60!black}|} characters: \begin{center}
+                 \begin{tabular}{llc}
+                    \ttfamily\color{green!60!black}||\char`\\mathbf x ||& $||\mathbf x||$& \xmark\\
+                    \ttfamily\color{green!60!black}\char`\\|\char`\\mathbf x\char`\\|& $\|\mathbf x\|$ & \cmark
+                \end{tabular}
+            \end{center}
+            Similarly, for inner-products or other angle brackets, use {\ttfamily\color{green!60!black}\char`\\langle} and {\ttfamily\color{green!60!black}\char`\\rangle}, not {\ttfamily\color{green!60!black}<} and {\ttfamily\color{green!60!black}>} (which are only for inequalities).
+            \begin{center}
+                \begin{tabular}{lcc}
+                    \ttfamily\color{green!60!black}<\char`\\mathbf x, y >& $<x,y>$& \xmark\\
+                    \ttfamily\color{green!60!black}\char`\\langle x,y\char`\\rangle& $\langle x,y\rangle$ & \cmark
+                \end{tabular}
+            \end{center}
+        
+            \medskip
+            
+            \item Know the difference between big operators and the smaller infix counterparts. For example, the union of multiple sets $\bigcup_{i=1}^n A_i$ uses {\ttfamily\color{green!60!black}\char`\\bigcup}, whereas $A\cup B$ simply uses {\ttfamily\color{green!60!black}\char`\\cup}. Switching them gives ugly results like $\cup_{i=1}^n A_i$ and $A\bigcup B$.
+            
+            Similarly, {\ttfamily\color{green!60!black}\char`\\Sigma} ($\Sigma$) and {\ttfamily\color{green!60!black}\char`\\Pi} ($\Pi$) should not be confused with {\ttfamily\color{green!60!black}\char`\\sum} ($\sum$) and {\ttfamily\color{green!60!black}\char`\\prod} ($\prod$).
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Some mistakes I have seen}
+        \begin{itemize}
+            \item If you want to subscript something with a word/text, make sure you use {\ttfamily\color{green!60!black}\char`\\text} or {\ttfamily\color{green!60!black}\char`\\mathrm}.
+            \begin{center}
+                \begin{tabular}{lcc}
+                    \ttfamily\color{green!60!black}\char`\\sigma\char`_\char`\{{normal}\char`\}& $\sigma_{normal}$& \xmark\\
+                    \ttfamily\color{green!60!black}\char`\\sigma\char`_\char`\\mathrm\char`\{{normal}\char`\}& $\sigma_\mathrm{normal}$& \cmark
+                \end{tabular}
+            \end{center}
+        
+            \bigskip
+        
+            \item Some people discover the {\ttfamily\color{green!60!black}\char`\\displaystyle} command and use it to type maths in text! This ruins the line spacing, \LaTeX{} has two different math modes \emph{for a reason}. In text, sums should look like $\sum_{k=0}^\infty \frac{x^k}{k!}$ and not $\displaystyle\sum_{k=0}^\infty \frac{x^k}{k!}$, which as you can clearly see, has made the paragraph look very ugly. Same goes for integrals, fractions, etc.
+        \end{itemize}
+    \end{frame}
+
+    \subsection{$\AmS$ Theorems}
+    \begin{frame}{Theorem Environments}
+        The \texttt{amsthm} package is useful for theorem--proof type documents. If you include it, you can then define various environments such as the \texttt{theorem} environment, \texttt{lemma}, and so on, but you do have to define these yourself in the preamble, i.e., before {\ttfamily{\bfseries\color{blue!80}\char92 begin\char`\{}{\bfseries\color{blue!30!black}document}{\bfseries\color{blue!80}\char`\}}}.
+        
+        \medskip
+        
+        My personal set up would usually looks something like this:
+        \begin{center}
+            \tikzset{
+                code/.style={
+                    draw,
+                    tape,
+                    tape bend top=none
+                }
+            }
+            \begin{tikzpicture}
+            \node[code] (prog) {
+                \begin{minipage}{10cm}
+                \footnotesize\ttfamily
+                {\color{black!50}\% AMS Theorem Environments}\\
+                {\color{red!60!black}\char`\\theoremstyle}\char`\{plain\char`\}\\ 
+                {\color{red!60!black}\char`\\newtheorem}\char`\{theorem\char`\}\char`\{Theorem\char`\}[section]\\ 
+                {\color{red!60!black}\char`\\newtheorem}\char`\{lemma\char`\}[theorem]\char`\{Lemma\char`\}\\  
+                {\color{red!60!black}\char`\\newtheorem}\char`\{prop\char`\}[theorem]\char`\{Proposition\char`\}\\[5pt]
+                {\color{red!60!black}\char`\\theoremstyle}\char`\{definition\char`\}\\ 
+                {\color{red!60!black}\char`\\newtheorem}\char`\{definition\char`\}[theorem]\char`\{Definition\char`\}\\ 
+                {\color{red!60!black}\char`\\newtheorem}*\char`\{notation\char`\}\char`\{Notation\char`\}\\[5pt]
+                {\color{red!60!black}\char`\\theoremstyle}\char`\{remark\char`\}\\ 
+                {\color{red!60!black}\char`\\newtheorem}\char`\{remark\char`\}[theorem]\char`\{Remark\char`\}
+                \end{minipage}};
+            \end{tikzpicture}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}{An Example}
+        \begin{center}
+            \tikzset{
+                code/.style={
+                    draw,
+                    tape,
+                    tape bend top=none
+                }
+            }
+            \begin{tikzpicture}
+            \node[code] (prog) {
+                \begin{minipage}{11cm}
+                \footnotesize\ttfamily
+                {\bfseries\color{blue!80}\char92 section\char`\{}{\bfseries\color{blue!30!black}First Proof of Vinogradow\textquotesingle{}s Theorem}{\bfseries\color{blue!80}\char`\}}\\
+                \phantom{}{\bfseries\color{blue!80}\char92 begin\char`\{}{\bfseries\color{blue!30!black}notation}{\bfseries\color{blue!80}\char`\}}\\
+                \phantom{xxxx}{\color{black!70}We write {\color{green!60!black}\$f(x)=O(g(x))\$}, or equivalently, {\color{green!60!black}\$f(x)\char`\\ll g(x)\$},}\\
+                \phantom{xxxx}{\color{black!70}to denote the fact that for some constant {\color{green!60!black}\$C>0\$}, }\\
+                \phantom{xxxx}{\color{black!70}{\color{green!60!black}\$|f(x)|\char`\\leq C g(x)\$} for all {\color{green!60!black}\$x\$} under consideration;}\\
+                \phantom{xxxx}{\color{black!70}usually for all {\color{green!60!black}\$x\$} larger than some fixed constant.}\\
+                \phantom{}{\bfseries\color{blue!80}\char92 end\char`\{}{\bfseries\color{blue!30!black}notation}{\bfseries\color{blue!80}\char`\}}\\[6pt]
+                \phantom{}{\bfseries\color{blue!80}\char92 begin\char`\{}{\bfseries\color{blue!30!black}definition}{\bfseries\color{blue!80}\char`\}}[von Mangoldt Function]\\
+                \phantom{xxxx}{\color{black!70}Let {\color{green!60!black}\$n\char`\\in\char`\\mathbb N\$}.\ Then the {\color{red!60!black}\char`\\emph}}\char`\{{\color{black!70}von Mangoldt function}\char`\}\\
+                \phantom{xxxx}{\color{black!70}{\color{green!60!black}\$\char`\\Lambda\char`\\colon\char`\\mathbb N\char`\\to\char`\\mathbb R\$} is defined by}\\
+                \phantom{xxxx}{\color{black!70}{\color{green!60!black}\$\char`\\Lambda(n)=\char`\\log p\$} if {\color{green!60!black}\$n=p\char`^{}k} for some prime {\color{green!60!black}\$p\$} and}\\
+                \phantom{xxxx}{\color{black!70}non-negative integer {\color{green!60!black}\$k\$}, and {\color{green!60!black}\$\char`\\Lambda(n)=0\$} otherwise.}\\
+                \phantom{}{\bfseries\color{blue!80}\char92 end\char`\{}{\bfseries\color{blue!30!black}definition}{\bfseries\color{blue!80}\char`\}}\\[6pt]
+                \phantom{}{\bfseries\color{blue!80}\char92 begin\char`\{}{\bfseries\color{blue!30!black}theorem}{\bfseries\color{blue!80}\char`\}}[Vinogradow, 1937]\\
+                \phantom{xxxx}{\color{black!70}Let {\color{green!60!black}\$A>0\$} be fixed.\ Then}\\
+                \phantom{xxxxxxxxxxxxxxx}{$\vdots$}
+                \end{minipage}};
+            \end{tikzpicture} 
+        \end{center}
+        \uncover<2>{\vspace{-7.7cm}\phantom x \hfill\setlength{\fboxsep}{0pt}\fbox{\includegraphics[scale=0.5]{images/amsthm}}\quad} 
+    \end{frame}
+
+    \begin{frame}{Some observations}
+        \begin{itemize}
+            \item The counter resets after a new section because the definition of \texttt{theorem} was given the optional \texttt{[section]} argument (alternatively you can do \texttt{chapter}, \texttt{subsection}, etc.)
+            \medskip
+            \item The other environments made use of the same counter as \texttt{theorem} because they were all given the \texttt{[theorem]} argument. If we did not do this, then they will be numbered independently.
+            \medskip
+            \item The \texttt{notation} environment has no numbering, since we used the {\ttfamily{\color{red!60!black}\char`\\newtheorem}*} command. Sometimes it's common to have, say, both a \texttt{theorem} environment and a \texttt{theorem*} environment, so if you want you can have both numbered and non-numbered theorems:
+            \begin{center}
+                \begin{minipage}{8cm}
+                    \ttfamily
+                    {\color{red!60!black}\char`\\newtheorem}\char`\{theorem\char`\}\char`\{Theorem\char`\}[section]\\
+                    {\color{red!60!black}\char`\\newtheorem}*\char`\{theorem*\char`\}\char`\{Theorem\char`\} 
+                \end{minipage}
+            \end{center}
+        \end{itemize}
+    \end{frame}
+
+    \subsection{How to Find Symbols for Maths}
+    \begin{frame}{How to find symbols}
+        There are thousands of maths symbols available, so it would be pointless trying to list them all, you tend to pick up the appropriate commands for them as you go along.
+        
+        \medskip
+        A good resource for finding maths symbols is an app called De\TeX ify. You can access this online at \href{https://detexify.kirelabs.org}{\usebeamercolor[fg]{structure}\ttfamily detexify.kirelabs.org}, or download the mobile app. This allows you to draw the symbol you want, and find the best match.
+        
+        \begin{center}
+            \includegraphics[height=3.5cm]{images/detexify}
+        \end{center}
+    \end{frame}
+
+    \section{More Document Elements}
+    \begin{frame}
+        \centering\LARGE
+        Enough maths---on to other elements of a \LaTeX{} document!
+    \end{frame}
+
+    \subsection{Footnotes}
+    \begin{frame}{Footnotes}
+        These are quite easy, you simply use the {\ttfamily\color{red!60!black}\char`\\footnote} command. 
+        \begin{center}
+            \tikzset{
+                code/.style={
+                    draw,
+                    tape,
+                    tape bend top=none
+                }
+            }
+            \begin{tikzpicture}
+            \node[code] (prog) {
+                \begin{minipage}{5cm}
+                \footnotesize\ttfamily
+                {\color{black!70}This is a sentence in the main text.}{\color{red!60!black}\char`\\footnote}\char`\{{\color{black!70}On the other hand, this is a footnote.}\char`\}
+                \vspace{.7cm}
+                \end{minipage}};
+            \end{tikzpicture} \qquad 
+            {\fbox{\includegraphics[scale=0.7]{images/footnote}}}
+        \end{center}
+    
+        \bigskip
+    
+        A common mistake is to place a footnote marker before a punctuation mark (e.g.\ to have \textsuperscript1. instead of .\textsuperscript1). In general, \textbf{footnotes go after punctuation marks}.
+    \end{frame}
+
+    \subsection{Bibliographies}
+    \begin{frame}{Bibliographies}
+        \LaTeX{} has an inbuilt \texttt{thebibliography} environment, which is okay, but you have to worry about the way the bibliography appears. 
+        
+        \begin{center}
+            \tikzset{
+                code/.style={
+                    draw,
+                    tape,
+                    tape bend top=none
+                }
+            }
+            \begin{tikzpicture}
+            \node[code] (prog) {
+                \begin{minipage}{10cm}
+                \footnotesize\ttfamily
+                \phantom{}{\color{black!70}The circle method was first applied to the ternary Goldbach}\\
+                \phantom{}{\color{black!70}problem by Hardy--Littlewood in} {\color{red!60!black}\char`\\cite}\char`\{{\color{green!60!black}hardylittlewood23}\char`\}{\color{black!70}.}\\
+                \phantom{}{\color{black!70}Nowadays, a concise proof due to Vinogradow is found in }\\
+                \phantom{}{\color{black!70}chapter 25 of} {\color{red!60!black}\char`\\cite}\char`\{{\color{green!60!black}davenport}\char`\}{\color{black!70}.}\\[6pt]
+                \phantom{}{\bfseries\color{blue!80}\char92 begin\char`\{}{\bfseries\color{blue!30!black}thebibliography}{\bfseries\color{blue!80}\char`\}}\char`\{9\char`\}\\
+                \phantom{xxxx}{\color{red!60!black}\char`\\bibitem}\char`\{davenport\char`\}\ {\color{black!70}H.\char`\\\ Davenport, Multiplicative Number}\\
+                \phantom{xxxx}{\color{black!70}Theory, 3rd edition, Springer--Verlag, 1995.}\\[6pt]
+                \phantom{xxxx}{\color{red!60!black}\char`\\bibitem}\char`\{hardylittlewood23\char`\}\ {\color{black!70}G.\char`\\\ H.\char`\\\ Hardy and L.\char`\\\ E.\char`\\}\\
+                \phantom{xxxx}{\color{black!70}Littlewood, Some problems of \`{}partito numerorum\textquotesingle{};}\\
+                \phantom{xxxx}{\color{red!60!black}\char`\\textsc}\char`\{{\color{black!70}iii}\char`\}{\color{black!70}: On the expression of a number as a sum of }\\
+                \phantom{xxxx}{\color{black!70}primes, Acta Mathematica 44, pp.\char`\\\ 1--70, 1923.}\\
+                \phantom{}{\bfseries\color{blue!80}\char92 end\char`\{}{\bfseries\color{blue!30!black}thebibliography}{\bfseries\color{blue!80}\char`\}}
+                \end{minipage}};
+            \end{tikzpicture} 
+        \end{center}
+        \uncover<2>{\vspace{-5cm}\phantom x \hfill\setlength{\fboxsep}{0pt}\fbox{\includegraphics[scale=0.7]{images/bib}}\quad} 
+    \end{frame}
+
+    \begin{frame}{Bibliographies}
+        The mandatory argument to the \texttt{thebibliography} environment is the \emph{width of the widest label}. This is used to indent the bibliography items properly. Since in the example, our labels are of the form $[1]$, $[2]$, etc, we put 9 assuming we will not need more than two-digit labels ($[1]$ up to $[9]$). If we had more than 10 but less than 100 items, we'd have put 99.
+        
+        \bigskip
+        
+        There is a better way to create bibliographies: using Bib\TeX{}. 
+        
+        \bigskip
+        
+        Create a separate \texttt{.bib} file in the same directory as your \texttt{.tex} document, and place in it entries like this:
+    \end{frame}
+
+    \begin{frame}{Bib\TeX}
+        \begin{center}
+            \tikzset{
+                code/.style={
+                    draw,
+                    tape,
+                    tape bend top=none
+                }
+            }
+            \begin{tikzpicture}
+            \node[code] (prog) {
+                \begin{minipage}{10cm}
+                \footnotesize\ttfamily
+                \phantom{}{\bfseries\color{blue!80}\char`@ book}\char`\{{\color{green!60!black}davenport},\\
+                \phantom{xxxx}{\color{red!60!black}author}\phantom{xxxx}= \char`\{{\color{black!70}Davenport, H.}\char`\},\\
+                \phantom{xxxx}{\color{red!60!black}title}\phantom{xxxxx}= \char`\{{\color{black!70}Multiplicative Number Theory}\char`\},\\
+                \phantom{xxxx}{\color{red!60!black}edition}\phantom{xxx}= \char`\{{\color{black!70}third}\char`\},\\
+                \phantom{xxxx}{\color{red!60!black}year}\phantom{xxxxxx}= \char`\{{\color{black!70}1995}\char`\},\\
+                \phantom{xxxx}{\color{red!60!black}publisher}\phantom{x}= \char`\{{\color{black!70}Springer--Verlag}\char`\},\\
+                \phantom{xxxx}{\color{red!60!black}pages}\phantom{xxxxx}= \char`\{{\color{black!70}145--171}\char`\}\\
+                \char`\}\\[6pt]
+                \phantom{}{\bfseries\color{blue!80}\char`@ article}\char`\{{\color{green!60!black}hardylittlewood23},\\
+                \phantom{xxxx}{\color{red!60!black}author}\phantom{xxxx}= \char`\{{\color{black!70}Hardy, G. H. and Littlewood, J. E.}\char`\},\\
+                \phantom{xxxx}{\color{red!60!black}title}\phantom{xxxxx}= \char`\{{\color{black!70}Some problems of \`{}partito numerorum\textquotesingle{};}\\
+                \phantom{xxxxxxxxxxxxxxxxx}{\color{black!70}\char`\{{\color{red!60!black}\char`\\textsc}{\color{black}\char`\{}iii{\color{black}\char`\}}\char`\}: On the expression of a}\\
+                \phantom{xxxxxxxxxxxxxxxxx}{\color{black!70} number as a sum of primes}\char`\},\\
+                \phantom{xxxx}{\color{red!60!black}journal}\phantom{xxx}= \char`\{{\color{black!70}Acta Mathematica}\char`\},\\
+                \phantom{xxxx}{\color{red!60!black}year}\phantom{xxxxxx}= \char`\{{\color{black!70}1923}\char`\},\\
+                \phantom{xxxx}{\color{red!60!black}volume}\phantom{xxxx}= \char`\{{\color{black!70}44}\char`\},\\
+                \phantom{xxxx}{\color{red!60!black}pages}\phantom{xxxxx}= \char`\{{\color{black!70}1--70}\char`\}\\
+                \char`\}
+                \end{minipage}};
+            \end{tikzpicture} 
+        \end{center}
+    \end{frame}
+
+    \begin{frame}{Bib\TeX}
+        \begin{itemize}
+            \item Most times, these entries are available online, you can search for them on websites such as \href{http://bibtexsearch.com}{\usebeamercolor[fg]{structure}\ttfamily bibtexsearch.com}, or if you find the paper online or on, say, \href{https://scholar.google.com}{\usebeamercolor[fg]{structure}Google Scholar}, clicking a ``cite'' button somewhere on the page usually produces a Bib\TeX{} entry you can just paste into your file.
+            
+            \item If you create the entries manually, you can see what different entry types there are (\texttt{book}, \texttt{article}, \texttt{phdthesis}, etc.) and the appropriate entries for each one here: \href{https://www.bibtex.com/e/entry-types/}{\usebeamercolor[fg]{structure}\ttfamily bibtex.com/e/entry-types/}.
+            
+            \item Note that the way the authors are written is syntax, and not always the way they are displayed. If you have three or more authors, you still write ``\texttt{and}'' between each one. The syntax is
+            \begin{center}
+                \ttfamily
+                Surname1, Name1a Name1b and Surname2, Name2 and Surname3, Name3a Name3b Name3c and ...
+            \end{center}
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Bib\TeX}
+        \begin{itemize}
+            \item Bib\TeX{} also ignores capitalisation and other text decoration sometimes. If you want to enforce some formatting, wrap it in an extra curly bracket, e.g.\ writing  \texttt{\char`\{G\char`\}oldbach} will ensure the G is capitalised.
+            
+            \item The green text in our example are the \emph{keys} which, are placed in the {\ttfamily{\color{red!60!black}\char`\\cite}} command similarly to when using the \texttt{thebibliography} environment.
+            
+            \item To actually produce the bibliography with Bib\TeX, simply do {\ttfamily{\color{red!60!black}\char`\\bibliography}\char`\{filename\char`\}} at the point in the document where you want the bibliography to appear, where \texttt{filename.bib} is the corresponding bib file.
+            
+            Similarly to the table of contents, this produces auxiliary files, so you should compile twice to get the correct output.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Bibliographies}
+        With the file from before, we now have:
+        
+        \begin{center}
+            \tikzset{
+                code/.style={
+                    draw,
+                    tape,
+                    tape bend top=none
+                }
+            }
+            \begin{tikzpicture}
+            \node[code] (prog) {
+                \begin{minipage}{10cm}
+                \footnotesize\ttfamily
+                \phantom{}{\color{black!70}The circle method was first applied to the ternary Goldbach}\\
+                \phantom{}{\color{black!70}problem by Hardy--Littlewood in} {\color{red!60!black}\char`\\cite}\char`\{{\color{green!60!black}hardylittlewood23}\char`\}{\color{black!70}.}\\
+                \phantom{}{\color{black!70}Nowadays, a concise proof due to Vinogradow is found in }\\
+                \phantom{}{\color{black!70}chapter 25 of} {\color{red!60!black}\char`\\cite}\char`\{{\color{green!60!black}davenport}\char`\}{\color{black!70}.}\\[6pt] 
+                \phantom{}{{\color{red!60!black}\char`\\bibliographystyle}}\char`\{plain\char`\}\\
+                \phantom{}{{\color{red!60!black}\char`\\bibliography}}\char`\{references\char`\}
+                \end{minipage}};
+            \end{tikzpicture} 
+        \end{center}
+        \uncover<2-2>{\vspace{-3cm}\phantom x \hfill\setlength{\fboxsep}{0pt}\fbox{\includegraphics[scale=0.7]{images/bib2}}\quad}
+        \uncover<3>{
+            \vspace{-2cm}
+            \begin{itemize}
+                \item Only the entries which are cited appear in the references. If the files contain additional entries and you want them to appear, do {\ttfamily{\color{red!60!black}\char`\\nocite}\char`\{*\char`\}} before  the {\ttfamily{\color{red!60!black}\char`\\bibliography}} command.
+                \item Try out other bibliography styles: \texttt{acm}, \texttt{alpha}, \texttt{apalike}, \texttt{siam}.
+            \end{itemize}
+        } 
+    \end{frame}
+
+    \begin{frame}{The Index}
+        It is possible to create indices quite easily in \LaTeX, but we will not get into it in these slides. 
+        
+        \begin{center}
+            \setlength{\fboxsep}{0pt}
+            \fbox{\includegraphics[height=5cm]{images/index}}
+        \end{center}
+        
+        You can see how here: \href{https://en.wikibooks.org/wiki/LaTeX/Indexing}{\ttfamily\usebeamercolor[fg]{structure}en.wikibooks.org/wiki/LaTeX/Indexing}
+    \end{frame}
+
+    \subsection{References and Links}
+    \begin{frame}{References}
+        Imagine writing something like this:
+        \begin{quote}
+            ``On page 16, in theorem 2.14, we used the illustration from figure 5 to adapt the idea of lemma 1.19 on page 10'',
+        \end{quote}
+        and then later on deciding to restructure parts of your documents, offsetting all the numbering.  What a nightmare!
+        
+        \medskip
+        
+        Luckily, environments like \texttt{figure}, \texttt{table}, the \texttt{amsthm} environments, as well as things like \texttt{sections}, etc., all support \textbf{labels}. These allow us to refer to items in a document using our labels, and that way, if we move anything around, the label is moved also.
+        
+        \begin{itemize}
+            \item The command {\ttfamily{\color{red!60!black}\char`\\label}\char`\{label\char`\}} creates a label.
+            \item The command {\ttfamily{\color{red!60!black}\char`\\ref}\char`\{label\char`\}} prints the number corresponding to the item with label \texttt{label}. 
+            \item The command {\ttfamily{\color{red!60!black}\char`\\pageref}\char`\{label\char`\}} prints the page number where the item labelled \texttt{label} appears. 
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{References}
+        \begin{center}
+            \tikzset{
+                code/.style={
+                    draw,
+                    tape,
+                    tape bend top=none
+                }
+            }
+            \begin{tikzpicture}
+            \node[code] (prog) {
+                \begin{minipage}{10cm}
+                \footnotesize\ttfamily
+                {\bfseries\color{blue!80}\char92 section\char`\{}{\bfseries\color{blue!30!black}Introduction}{\bfseries\color{blue!80}\char`\}}\\
+                \phantom{}{\color{black!70} In section {\color{red!60!black}\char`\\ref}{\color{black}\char`\{}{\color{green!60!black}sec:pyth}{\color{black}\char`\}} (page {\color{red!60!black}\char`\\pageref}{\color{black}\char`\{}{\color{green!60!black}sec:pyth}{\color{black}\char`\}}), we shall see Pythagoras\textquotesingle{} theorem}
+                \phantom{}{\color{black!70} (theorem\raisebox{-3pt}{\char`~} {\color{red!60!black}\char`\\ref}{\color{black}\char`\{}{\color{green!60!black}thm:pythagoras}{\color{black}\char`\}}).\ The philosopher Pythagoras}
+                \phantom{}{\color{black!70} is illustrated in figure\raisebox{-3pt}{\char`~}{\color{red!60!black}\char`\\ref}{\color{black}\char`\{}{\color{green!60!black}fig:pythagoras}{\color{black}\char`\}}.}\\[6pt]
+                {\bfseries\color{blue!80}\char92 section\char`\{}{\bfseries\color{blue!30!black}Pythagoras' Theorem}{\bfseries\color{blue!80}\char`\}}\\
+                {\color{red!60!black}\char`\\label}{\color{black}\char`\{}{\color{green!60!black}sec:pyth}{\color{black}\char`\}}\\[6pt]
+                \phantom{}{\bfseries\color{blue!80}\char92 begin\char`\{}{\bfseries\color{blue!30!black}theorem}{\bfseries\color{blue!80}\char`\}}[Pythagoras]\\
+                \phantom{xxxx}{\color{red!60!black}\char`\\label}{\color{black}\char`\{}{\color{green!60!black}thm:pythagoras}{\color{black}\char`\}}\\
+                \phantom{xxxx}{\color{black!70}In a right-angled triangle, {\color{green!60!black}\$a\^{}2+b\^{}2=c\^{}2\$}.}\\
+                \phantom{}{\bfseries\color{blue!80}\char92 end\char`\{}{\bfseries\color{blue!30!black}theorem}{\bfseries\color{blue!80}\char`\}}\\[6pt]
+                \phantom{}{\bfseries\color{blue!80}\char92 begin\char`\{}{\bfseries\color{blue!30!black}figure}{\bfseries\color{blue!80}\char`\}}\\
+                \phantom{xxxx}{\color{red!60!black}\char`\\centering}\ 
+                \phantom{}{\color{red!60!black}\char`\\includegraphics}\char`\{pythagoras\char`\}\\
+                \phantom{xxxx}{\color{red!60!black}\char`\\caption}\char`\{{\color{black!70}}The philosopher Pythagoras\char`\}\\
+                \phantom{xxxx}{\color{red!60!black}\char`\\label}{\color{black}\char`\{}{\color{green!60!black}fig:pythagoras}{\color{black}\char`\}}\\
+                \phantom{}{\bfseries\color{blue!80}\char92 end\char`\{}{\bfseries\color{blue!30!black}figure}{\bfseries\color{blue!80}\char`\}}
+                \end{minipage}};
+            \end{tikzpicture} 
+        \end{center}
+        \uncover<2-2>{\vspace{-7.6cm}\phantom x \hfill\setlength{\fboxsep}{0pt}\fbox{\includegraphics[scale=0.7]{images/labels}}\quad}
+    \end{frame}
+
+    \begin{frame}{References}
+        \begin{itemize}
+            \item Notice that the {\ttfamily{\color{red!60!black}\char`\\label}} command in figures and tables must be used \emph{after} the {\ttfamily{\color{red!60!black}\char`\\caption}\char`\{label\char`\}} command, since that is the command which assigns a number to the figure/table.
+            
+            \medskip
+            \item The use of {\ttfamily\raisebox{-3pt}{\char`~}} ensures a \emph{non-breaking} space, e.g.\ {\ttfamily Dr\raisebox{-3pt}{\char`~}Ebejer}. 
+            
+            \medskip
+            \item It is possible to avoid having to type the corresponding word (e.g. ``{\ttfamily theorem\raisebox{-3pt}{\char`~}{\color{red!60!black}\char`\\ref}\char`\{thm:stokes\char`\}}'') and simply to do {\ttfamily{\color{red!60!black}\char`\\cref}\char`\{thm:stokes\char`\}}, but this requires the use of the \texttt{cleveref} package. 
+            
+            \medskip
+            \item You can number equations using the \texttt{equation} environment illustrated earlier (also individual lines of the \texttt{align}/\texttt{gather} environments), label them as usual using the {\ttfamily{\color{red!60!black}\char`\\label}} command,  and refer to them using the {\ttfamily{\color{red!60!black}\char`\\eqref}} command provided by the \texttt{amsmath} package ({\ttfamily{\color{red!60!black}\char`\\cref}} is fine too).
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Links}
+        The package \texttt{hyperref} allows you to have clickable hyperlinks in your PDF document. To use it, as usual, we do {\ttfamily{\color{red!60!black}\char`\\usepackage}\char`\{hyperref\char`\}}.
+        \bigskip
+        \begin{itemize}
+            \item References to labels are automatically linked when \texttt{hyperref} is included.
+            \bigskip 
+            \item To link to a website, you do:
+            \begin{center}
+                \ttfamily
+                {\color{red!60!black}\char`\\href}\char`\{https://url.com\char`\}\char`\{text to display\char`\}                
+            \end{center}
+            \bigskip
+            \item To link an email address, you do:
+            \begin{center}
+                \ttfamily
+                {\color{red!60!black}\char`\\href}\char`\{mailto:your@email.com\char`\}\char`\{text to display\char`\}                
+            \end{center}
+        \end{itemize}
+    \end{frame}
+
+    \section{TikZ and Other Resources}
+    \subsection{TikZ}
+    \begin{frame}{TikZ}
+        A very useful package/tool is the \texttt{tikz} package. This allows you to draw diagrams, plots, graphs in a purely syntactic way. We will not get into it here, but here is a simple example (needs {\ttfamily{\color{red!60!black}\char`\\usepackage}\char`\{tikz\char`\}}):
+        \bigskip
+        \begin{center}
+            \tikzset{
+                code/.style={
+                    draw,
+                    tape,
+                    tape bend top=none
+                }
+            }
+            \begin{tikzpicture}
+            \node[code] (prog) {
+                \begin{minipage}{7cm}
+                \footnotesize\ttfamily
+                {\bfseries\color{blue!80}\char92 begin\char`\{}{\bfseries\color{blue!30!black}tikzpicture}{\bfseries\color{blue!80}\char`\}}\\
+                \phantom{xxxx}{\color{orange!80!black}\char`\\draw[red] (0,0) circle (0.5cm);}\\
+                \phantom{xxxx}{\color{orange!80!black}\char`\\draw[blue] (-0.5,-0.5) -- (0.5, 0.5);}\\ 
+                {\bfseries\color{blue!80}\char92 end\char`\{}{\bfseries\color{blue!30!black}tikzpicture}{\bfseries\color{blue!80}\char`\}}
+                \end{minipage}};
+            \end{tikzpicture} \qquad\quad
+            \raisebox{0.5cm}{\begin{tikzpicture}
+                \draw[red] (0,0) circle (0.5cm);
+                \draw[blue] (-0.5, -0.5) -- (0.5, 0.5);
+                \end{tikzpicture}}
+        \end{center}
+        \bigskip
+        
+        A more detailed introduction to TikZ can be found here:
+        \centerline{\href{https://www.overleaf.com/learn/latex/TikZ_package}{\ttfamily\usebeamercolor[fg]{structure}overleaf.com/learn/latex/TikZ\char`_package}}
+    \end{frame}
+
+    \begin{frame}{TikZ Showcase}
+        \centering 
+        \only<1>{
+        \includegraphics[height=6cm]{images/tikz1}
+        \qquad \includegraphics[height=6cm]{images/tikz2}
+        }
+        \only<2>{
+            \includegraphics[height=6cm]{images/tikz3}
+        }
+        \only<3>{
+            \includegraphics[height=3cm]{images/tikz4}\\
+            \includegraphics[height=3cm]{images/tikz5} \hfil \includegraphics[height=3cm]{images/tikz6}
+        }
+        \only<4>{
+            \includegraphics[height=3cm]{images/tikz7} \hfil
+            \includegraphics[height=3cm]{images/tikz8} \hfil \includegraphics[height=3cm]{images/tikz9}
+        }
+    \end{frame}
+
+    \subsection{Templates and Resources}
+    \begin{frame}{Templates and other Resources}
+        \begin{itemize}
+            \item There are multiple document templates for CVs, documents, posters, theses, etc., at:
+            \begin{enumerate}
+                \item \href{https://www.latextemplates.com}{\ttfamily\usebeamercolor[fg]{structure}LatexTemplates.com}
+                \item \href{https://www.overleaf.com/latex/templates}{\ttfamily\usebeamercolor[fg]{structure}Overleaf.com/LaTeX/templates}
+            \end{enumerate}
+        
+            \medskip
+        
+            \item A great resource is De\TeX ify which we already mentioned, for finding math symbols: {\href{http://detexify.kirelabs.org/}{\ttfamily\usebeamercolor[fg]{structure}detexify.kirelabs.org}}
+            
+            \medskip
+            
+            \item The \TeX{} Stack Exchange website is a great place to find answers to FAQ's, as well as to ask questions yourself: {\href{https://tex.stackexchange.com/}{\ttfamily\usebeamercolor[fg]{structure}TeX.stackexchange.com}}
+            
+            \medskip
+            
+            \item A dissertation template for UM made by JP is available here: 
+            
+            \begin{center}
+                \href{https://www.overleaf.com/latex/templates/msc-or-phd-dissertation-template-originally-for-the-university-of-malta/xhnmbpvkmmqp}
+                {\parbox{0.8\textwidth}{\centering\ttfamily\usebeamercolor[fg]{structure}www.overleaf.com/latex/template/msc-or-phd-\\dissertation-template-originally-for-the-\\university-of-malta/xhnmbpvkmmqp}}
+            \end{center}
+        \end{itemize}
+    \end{frame}
+
+    \def\dontaddtocontents#1#2{}
+    \let\addtocontents=\dontaddtocontents
+    \section{}
+    \begin{frame}
+        
+        \vfill\lato
+        
+        \centering
+        \emph{\Huge Thank you!}
+        
+        \vfill
+        \begin{center}
+            \footnotesize
+            \begin{minipage}{5cm}
+                \centering 
+                \includegraphics[height=2.5cm]{images/luke}\\
+                \textbf{Luke Collins}\\
+                \usebeamercolor[fg]{structure}
+                \href{mailto:luke.collins@warwick.ac.uk}{\texttt{luke.collins@warwick.ac.uk}}\\
+                \href{https://drmenguin.com}{\ttfamily https://drmenguin.com}          
+            \end{minipage}
+            \hfil
+            \begin{minipage}{5cm}
+                \centering
+                \includegraphics[height=2.5cm]{images/jp}\\
+                \textbf{Dr Jean-Paul Ebejer}\\
+                \usebeamercolor[fg]{structure}
+                \href{mailto:jean.p.ebejer@um.edu.mt}{\texttt{jean.p.ebejer@um.edu.mt}}\\
+                \href{https://bitsilla.com}{\ttfamily https://bitsilla.com} 
+            \end{minipage}
+        \end{center}
+        \vfil
+        \scriptsize
+        
+        \color{gray!70!black}
+        \textbf{Doctoral School}\\
+        University of Malta\\[7pt]
+        \includegraphics[height=0.8cm]{images/um}
+
+        
+        
+    \end{frame}
+\end{document}
