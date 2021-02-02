@@ -1,12 +1,12 @@
 ---
 title: "On the Walks and Bipartite Double Coverings of Graphs with the same Main Eigenspace"
-subtitle: <i>In press</i>
 collection: publications
 permalink: /publication/walks-cdcs
-date: 2019-07-01
-preprinturl: https://arxiv.org/abs/1906.05790
+date: 2020-11-13
 excerpt: 'The main eigenvalues of a graph $G$ are those eigenvalues of the $(0,1)$-adjacency matrix $\mathbf A$ having a corresponding eigenvector not orthogonal to $\mathbf j=(1,\dots,1)$. The CDC of a graph $G$ is the direct product $G\times K_2$'
-citation: 'Luke Collins and Irene Sciriha. (2019). <em>On the Walks and Bipartite Double Coverings of Graphs with the same Main Eigenspace</em>. ArXiv:1906.05790.'
+venue: 'Discussiones Mathematicae Graph Theory'
+paperurl: https://www.dmgt.uz.zgora.pl/publish/bbl_view_press.php?ID=45446
+citation: 'Luke Collins and Irene Sciriha. (2020). <em>On the Walks and Bipartite Double Coverings of Graphs with the same Main Eigenspace</em>. ArXiv:1906.05790.'
 ---
 
 ## Abstract
