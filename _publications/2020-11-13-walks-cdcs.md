@@ -6,7 +6,7 @@ date: 2020-11-13
 excerpt: 'The main eigenvalues of a graph $G$ are those eigenvalues of the $(0,1)$-adjacency matrix $\mathbf A$ having a corresponding eigenvector not orthogonal to $\mathbf j=(1,\dots,1)$. The CDC of a graph $G$ is the direct product $G\times K_2$'
 venue: 'Discussiones Mathematicae Graph Theory'
 paperurl: https://www.dmgt.uz.zgora.pl/publish/bbl_view_press.php?ID=45446
-citation: 'Luke Collins and Irene Sciriha. (2020). <em>The Walks and CDC of Graphs with the same Main Eigenspace</em>, Discussiones Mathematicae Graph Theory, <em>in press</em>. DOI: <a href="https://doi.org/10.7151/dmgt.2386">10.7151/dmgt.2386"</a>.'
+citation: 'Luke Collins and Irene Sciriha. (2020). <em>The Walks and CDC of Graphs with the same Main Eigenspace</em>, Discussiones Mathematicae Graph Theory, <em>in press</em>. DOI: <a href="https://doi.org/10.7151/dmgt.2386">10.7151/dmgt.2386</a>.'
 ---
 
 ## Abstract
